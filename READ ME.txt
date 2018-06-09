@@ -1,0 +1,154 @@
+Task 1
+Write a class named as RetailItem that holds data about an item in a retail store. Class should have
+following private member variables.
+ description:A string that holds the description of an item
+ units: An int that holds number of units currently in inventory
+ price: A double that holds items retail price.
+
+1.1 Write a default constructor that initializes each member variable of class such that Description with Null,
+units with 0 and price with 0
+RetailItem()
+
+1.2 Write a constructor that accepts the arguments for each member variable such that string des as-
+signed to description ,int u to units and double p to price.
+RetailItem(string des,int u,double p)
+
+1.3 Generate getter setter of each member variable : such that description should never be greater than 50
+characters,units should never be negative and price should always be greater than 5
+ void setDescription(string s)
+ string getDescription()
+ void setUnits(int u)
+ int getUnits()
+ void setPrice(double p)
+ double getPrice()
+
+1.4 Write a destructor for the class RetailItem.which prints "Destructor called" statement on screen
+
+1.5 Write a global function SetRetailArray which takes ve arguments, an array of type RetailItem
+named arr, int size, array of type string as descriptions, array of type int as units and array of type
+double as p . You are required to assign values to each RetailItem in arr using above dened setter
+functions.
+void SetRetailArray (RetailItem arr[], int size,string descriptions[],int units[],double
+p[])
+
+1.6 Write a global function getRetailArray which takes two arguments, an array of type RetailItem
+named arr and int size. You are required to get and display information of each RetailItem in arr
+using above dened getter functions.
+void getRetailArray(RetailItem arr[], int size)
+
+Task 2.1
+Write a class Point with data members
+ x : a integer x coordinate
+ y : a integer x coordinate
+The class has the following member functions.
+
+6.1 Default constructor initializing the coordinates to zero
+Point()
+
+6.2 A constructor that takes the values and initializes coordinates with x1 and y1
+Point (int x1,int y1)
+
+6.3 a destructor that prints the following statement on screen :"Destructor Called" Point()
+
+6.4 Getter and Setter functions.
+
+Task 2.2
+Write a class called Line that represents a line segment between two Points . Your Line objects should have
+the following methods:
+Line(const Point &p1, const Point &p2) Constructs a new Line that contains the given two Points.
+Point getP1() Returns this Line's rst endpoint.
+Point getP2() Returns this Line's second endpoint.
+String toString() Returns a String representation of this Line, such as "[(22, 3), (4,
+7)]" .
+Line(int x1, int y1, int x2, int y2) Constructs a new Line that contains the given two Points.
+double getSlope() Returns the slope of this Line. Remember The slope of a line
+between points (x1, y1) and (x2, y2) is equal to (y2-y1)/(x2-x1).
+
+Task 3
+Write a Circle class that has following private data members
+ radius: a double
+ pi: a double (with the value 3.14159)
+The class has the following member functions.
+
+3.1 Default Constructor: A default constructor that sets radius to 0.0
+
+3.2 Constructor: Accepts the radius of the circle as an argument
+
+3.3 setRadius: A setter function for the radius variable
+
+3.4 getRadius: An getter function for the radius variable
+
+3.5 getArea: Returns the area of the circle which is calculated as area= pi * radius *radius
+
+3.6 getDiameter: Returns the diameter (of type double) of the circle, calculated as diameter=radius *2;
+
+3.7 getCircumference: Returns the circumference(of type double) of the circle, which is calculated as circum-
+ference= 2 *pi * radius
+
+3.8 Write a destructor that prints Destructor is executing when called. Notice when destructor will be called
+by running the program.
+
+Task 4
+Design a class Complex for handling Complex numbers and include the following:
+ real: a double
+ imaginary: a double
+The class has the following member functions.
+
+6.1 Default constructor initializing the number to be 0.0 + 0.0i
+
+6.2 A constructor that takes the value(s) to which the Complex number is initialized.
+
+6.3 Getter and Setter functions.
+
+6.4 A function for adding, subtracting and multiplying the Complex number.
+The usage should be similar to c1.add (c2) returning the object of class Complex, where c1 and c2 are
+both objects of the Complex class.
+Complex add(Complex c)
+Complex subtract(Complex c)
+Complex multiply(Complex c)
+
+Task 5
+Write a class named GroceryList that represents a list of items to buy from the market, and another class
+named GroceryItemOrder that represents a request to purchase a particular item in a given quantity (exam-
+ple: four boxes of cookies). The GroceryList class should use an array to store the grocery items and size
+variable to keep track of its size (number of items in the list so far). Assume that a grocery list will have no
+more than 10 items. A GroceryList object should have the following methods:
+GroceryList() Constructs a new empty grocery list.
+void add(GroceryItemOrder item) Adds the given item order to this list if the list has fewer than 10
+items.
+double getTotalCost() Returns the total sum cost of all grocery item orders in this list.
+The GroceryItemOrder class should store an item quantity and a price per unit. A GroceryItemOrder
+object should have the following methods:
+GroceryItemOrder(String name, int quantity, double pricePerUnit) Constructs an item order to purchase
+the item with the given name, in the
+given quantity, which costs the given
+price per unit.
+double getCost() Returns the total cost of this item in its
+given quantity. For example, four boxes
+of cookies that cost 2.30 per unit have
+a total cost of 9.20.
+void setQuantity(int quantity) Sets this grocery items quantity to be
+the given value
+
+Task 6
+Write a class called Rectangle that represents a rectangular two-dimensional region. Your Rectangle objects
+should have the following methods:
+Rectangle(int x, int y, int width, int height) Constructs a new Rectangle whose top-left corner is specied by
+the given coordinates and with the given width and height.
+int getHeight() Returns this Rectangle's height.
+int getWidth() Returns this Rectangle's width.
+int getX() Returns this Rectangle's x-coordinate.
+int getY() Returns this Rectangle's y-coordinate.
+String toString() Returns a String representation of this Rectangle, such as "Rect-
+angle[x=1,y=2,width=3, height=4]".
+Rectangle(Point p, int width, int height) Construct a new Rectangle whose top-left corner is specied by
+the given Point and with the given width and height.
+bool contains(Point p) Returns whether the given Point or coordinates lie inside the
+bounds of this Rectangle. *Boundary of rectangle is included
+Rectangle union(Rectangle &rect) Returns a new Rectangle that represents the area occupied by the
+tightest bounding box that contains both this Rectangle and the
+given other Rectangle.
+Rectangle intersection(Rectangle &rect) Return a new Rectangle that represents the largest rectangular
+region completely contained within both this Rectangle and the
+given other Rectangle. If the Rectangles do not intersect at all,
+returns a Rectangle with width and height both equal to 0.
